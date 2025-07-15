@@ -97,11 +97,11 @@ int main(void)
 	set_time.seconds = 00;
 	set_time.minutes = 25;
 	set_time.hours = 11;
-	set_time.day_of_month = 6;
-	set_time.day_of_week = 5;
-	set_time.day_of_year = 279;
-	set_time.month = 10;
-	set_time.year = 2017;
+	set_time.day_of_month = 15;
+	set_time.day_of_week = 3;
+	set_time.day_of_year = 196;
+	set_time.month = 07;
+	set_time.year = 2025;
 	
 	RTC_Set_Time(set_time);
 	
@@ -124,21 +124,21 @@ int main(void)
 
 	/* Only RTC Read */
 
-	alarm = 0;
+	/*alarm = 0;
 	flag = 0;
-	IO0DIR = 0x00000010; 	/* P0.4 as output pin for LED */
-	CCR = 0x02; 			/* Reset Clock Tick Counter */
-	AMR = 0x00; 			/* Alarm registers not masked */
-	PREINT = 0x01C8; 		/* For 15MHz Fpclk, PREINT value */
-	PREFRAC = 0x61C0; 		/* For 15MHz Fpclk, PREFRAC value */
+	IO0DIR = 0x00000010; 	// P0.4 as output pin for LED 
+	CCR = 0x02; 			// Reset Clock Tick Counter 
+	AMR = 0x00; 			// Alarm registers not masked 
+	PREINT = 0x01C8; 		// For 15MHz Fpclk, PREINT value 
+	PREFRAC = 0x61C0; 		// For 15MHz Fpclk, PREFRAC value 
 	VICVectAddr0 = (unsigned) RTC_ISR;
 	VICVectCntl0 = 0x0000002D;
 	VICIntEnable = 0x00002000;
 	VICIntSelect = 0x00000000;
-	CCR = 0x01; 			/* Clock Enable */
-	ILR = 0x03; 			/* RTC interrupts enabled */
+	CCR = 0x01; 			// Clock Enable 
+	ILR = 0x03; 			// RTC interrupts enabled 
 	IO0CLR = 0x00000010;	
-	
+	*/
 	while(1)
 	{
 		if(alarm == 1)

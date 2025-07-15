@@ -10,20 +10,20 @@ int main()
    unsigned char r;
   UART0_CONFIG();
   IODIR0|=LED;
-  IOSET0=LED;
+  IOCLR0=LED;
   while(1)
   {
    	r=UART0_RX();
     
 	if(r=='1')
 	{
-	 IOCLR0=LED;
+	 IOSET0=LED;
 	 string("LED is ON");
 
 	}
 	else if (r=='0')
 	{
-	 IOSET0=LED;
+	 IOCLR0=LED;
 	 string("LED IS OFF");
 	}
 	else if (r!='\r') 
