@@ -14,7 +14,7 @@ int ADC_Conversion()
  ab    = (ab>>6)&0X3ff;                       // Shift 6 bits right                  
  voltage = ((3.3*ab)/1023)*100;
 
- return ab;
+ return voltage;
 
 }
 

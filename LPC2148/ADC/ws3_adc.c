@@ -14,7 +14,7 @@ int ADC_Conversion()
 
  voltage = ((3.3*ab)/1023)*100;
 
- return ab;
+ return voltage;
 
 }
 
